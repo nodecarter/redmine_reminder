@@ -1,4 +1,4 @@
-class RedmineReminder::Collector
+class Collector
   attr_reader :options
 
   def initialize(options)
@@ -48,7 +48,7 @@ class RedmineReminder::Collector
   # Get issues due in X days
   def issues_due_in_days
     due_date      = options.days.day.from_now.to_date
-    sql_condition = ARCondition.new ["#{Issue.table_name}.due_date <= ?", due_date]
+    sql_condition = ArCondition.new ["#{Issue.table_name}.due_date <= ?", due_date]
     sql_condition << issue_statuses
     sql_condition << projects
     sql_condition << trackers

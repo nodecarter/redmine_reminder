@@ -1,4 +1,4 @@
-class RedmineReminder::Reminder
+class Reminder
   attr_reader :user, :issues
 
   def initialize(user)
