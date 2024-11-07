@@ -14,4 +14,4 @@ Redmine::Plugin.register :redmine_reminder do
     html: { class: 'reminder_options_label' }
 end
 
-require_dependency 'redmine_reminder/hooks'
+require File.expand_path('lib/hooks', __dir__)
